@@ -9,18 +9,18 @@ import Construction from './components/content/Construction'
 
 function Nav() {
   return (
-    <div className="flex flex-col items-center w-fit mx-auto">
+    <div className="flex flex-col items-center mx-auto w-fit">
        <Link to="/" className="flex w-full bg-base-200">
         {"beanfrog.xyz".split("").map((char, index) => (
           <p key={index} className="flex-1 text-center">{char}</p>
         ))}
       </Link>
       <div className="flex flex-row justify-center items-center">
-        <Link to="/about" className="btn rounded-bl-lg">about</Link>
+        <Link to="/about" className="rounded-bl-lg btn">about</Link>
         <Link to="/tech" className="btn">tech</Link>
         <Link to="/skills" className="btn">skills</Link>
         <Link to="/projects" className="btn">projects</Link>
-        <Link to="/blog" className="btn rounded-br-lg">blog</Link>
+        <Link to="/blog" className="rounded-br-lg btn">blog</Link>
       </div>
     </div>
   );
@@ -48,7 +48,7 @@ function App() {
         <Nav />
       </span>
       <LowTaperFade>
-      <div className="p-6 bg-white bg-opacity-10 rounded-lg border border-white border-opacity-30 transition h-3/5 lg:w-3/5 md:w-3.5 z-20 sm:w-screen">
+      <div className="z-20 p-6 h-3/5 bg-white bg-opacity-10 rounded-lg border border-white border-opacity-30 transition lg:w-3/5 md:w-3/5 sm:w-screen">
 
         <Routes>
             <Route path="/" element={<Home />} />

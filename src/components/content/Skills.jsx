@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export default function Skills() {
-{/*loading from github raw is faster than the official deployment :skull: */}
+/*loading from github raw is faster than the official deployment :skull: */
   const SkillIcon = ({ icon, hovertext }) => {
     const [errorCount, setErrorCount] = useState(0);
   
@@ -23,7 +23,7 @@ export default function Skills() {
     return (
       <abbr title={hovertext}>
         <img
-          className="h-6 w-6 md:h-10 md:w-10 lg:h-12 lg:w-12"
+          className="w-6 h-6 md:h-10 md:w-10 lg:h-12 lg:w-12"
           src={`https://raw.githubusercontent.com/LelouchFR/skill-icons/refs/heads/main/assets/${icon}-dark.svg`}
           alt={`${icon} icon`}
           onError={handleError}
@@ -35,10 +35,10 @@ export default function Skills() {
   
   
   return (
-    <div className="p-6 w-full h-full flex flex-col items-center justify-center transition">
+    <div className="flex flex-col justify-center items-center p-6 w-full h-full transition">
       <h1 className="text-xl font-bold">Skills</h1>
 
-      <div className="flex flex-col w-full p-4 items-center justify-center">
+      <div className="flex flex-col justify-center items-center p-4 w-full">
         <h1 className="text-xl">Proficient</h1>
        <span className="flex flex-wrap space-x-2">
          <SkillIcon icon="javascript" hovertext="JavaScript"/>
@@ -55,7 +55,7 @@ export default function Skills() {
          <SkillIcon icon="arduino" hovertext="Arduino"/>
        </span>
       </div>
-      <div className="flex flex-col w-full p-4 items-center justify-center">
+      <div className="flex flex-col justify-center items-center p-4 w-full">
         <h1 className="text-xl">Competent</h1>
        <span className="flex flex-wrap space-x-2">
        <SkillIcon icon="linux" hovertext="Linux SysAdmin"/>
@@ -70,7 +70,7 @@ export default function Skills() {
        <SkillIcon icon="prettier" hovertext="Prettier"/>
        </span>
       </div>
-      <div className="flex flex-col w-full p-4 items-center justify-center">
+      <div className="flex flex-col justify-center items-center p-4 w-full">
         <h1 className="text-xl">Learning</h1>
        <span className="flex flex-wrap space-x-2">
        <SkillIcon icon="rust" hovertext="Rust"/>

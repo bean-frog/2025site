@@ -1,14 +1,23 @@
+function RandomQuote() {
+  const quotes = [
+    "\"I'm schizophrenic, and so am I\" - Terry Davis",
+    "\"If I was a dog, I would bark\" - Terry Davis",
+    "\"Intelligence is the ability to avoid doing work, yet getting the work done\" - Linus Torvalds",
+    "\"If you're not scared, you're not going fast enough\" - Ken Block"
+  ];
+  const quote = quotes[Math.floor(Math.random() * quotes.length)];
+  return <p>{quote}</p>;
+}
 export default function About() {
   return (
-    <div className="p-6 w-full h-full flex flex-col items-center justify-center transition">
+    <div className="flex flex-col justify-center items-center p-6 w-full h-full transition">
       <h1 className="text-xl font-bold">Hello World!</h1>
-      <ul>
-    <li><strong>Name:</strong> Graeme Kieran, or some variation of beanfrog</li>
+      <ul className="flex flex-col justify-center">
+    <li><strong>Name:</strong> Graeme Kieran</li>
     <li><strong>Profession:</strong> Student</li>
     <li><strong>Location:</strong> California, USA</li>
     <li><strong>Passions:</strong> Programming, Urban Exploration, Music, Dogs, Weightlifting, Cooking</li>
-    <li><strong>Favorite Quote:</strong> "It's not about the destination; it's about the journey and how you get there" - Ken Block</li>
-    <li><strong>Fun Fact:</strong> I make a mean egg fried rice</li>
+    <li><strong>Random Quote:</strong> <RandomQuote /></li>
    
 </ul>
 <h1 className="text-xl font-bold">Get in touch</h1>
