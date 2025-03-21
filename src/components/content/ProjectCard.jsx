@@ -6,8 +6,14 @@ export default function ProjectCard({ title, description, links, languages }) {
       Java: "#b07219",
       Typescript: "#2b7489",
       Ruby: "#701516",
-      // Add more languages and their corresponding colors as needed
+      Rust: "#dea584",
+      C: "#555555",
+      "C++": "#f34b7d",
+      CSS: "#563d7c",
+      HTML: "#e34c26",
+      SQL: "#f29111",
     };
+    
   
     return (
       <div className="bg-opacity-10 rounded-lg border border-white border-opacity-30 bg-primary transitio card">

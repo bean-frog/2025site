@@ -3,10 +3,16 @@ function RandomQuote() {
     "\"I'm schizophrenic, and so am I\" - Terry Davis",
     "\"If I was a dog, I would bark\" - Terry Davis",
     "\"Intelligence is the ability to avoid doing work, yet getting the work done\" - Linus Torvalds",
-    "\"If you're not scared, you're not going fast enough\" - Ken Block"
+    "\"If you're not scared, you're not going fast enough\" - Ken Block",
+    "\"I'm gonna dip this potato in some crushed up Vicodin, and there's nobody who can stop me\" - Matt Damon (as Mark Watney)"
   ];
   const quote = quotes[Math.floor(Math.random() * quotes.length)];
-  return <p>{quote}</p>;
+  return (
+    <div className="flex flex-col">
+   <p className="ml-0">{quote.split("-")[0].trim()}</p>
+<p className="ml-4">- {quote.split("-")[1].trim()}</p>
+    </div>
+  )
 }
 export default function About() {
   return (
@@ -17,7 +23,8 @@ export default function About() {
     <li><strong>Profession:</strong> Student</li>
     <li><strong>Location:</strong> California, USA</li>
     <li><strong>Passions:</strong> Programming, Urban Exploration, Music, Dogs, Weightlifting, Cooking</li>
-    <li><strong>Random Quote:</strong> <RandomQuote /></li>
+    <li><strong>Random Quote:</strong> </li>
+    <RandomQuote />
    
 </ul>
 <h1 className="text-xl font-bold">Get in touch</h1>
