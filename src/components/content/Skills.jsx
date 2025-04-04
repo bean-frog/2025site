@@ -23,8 +23,8 @@ export default function Skills() {
     return (
       <abbr title={hovertext}>
         <img
-          className="w-6 h-6 md:h-10 md:w-10 lg:h-12 lg:w-12"
-          src={`https://raw.githubusercontent.com/LelouchFR/skill-icons/refs/heads/main/assets/${icon}-dark.svg`}
+  className="block w-6 h-6 align-middle md:h-10 md:w-10 lg:h-12 lg:w-12"
+  src={`https://raw.githubusercontent.com/LelouchFR/skill-icons/refs/heads/main/assets/${icon}-dark.svg`}
           alt={`${icon} icon`}
           onError={handleError}
         />
@@ -35,13 +35,13 @@ export default function Skills() {
   
   
   return (
-    <div className="flex flex-col justify-center items-center p-6 w-full h-full transition">
+    <div className="flex flex-col justify-center items-center p-6 space-y-2 w-full h-full transition">
       <h1 className="text-xl font-bold">Skills</h1>
 
-      <div className="flex flex-col justify-center items-center p-4 w-full">
+      <div className="p-4 w-full max-w-md bg-opacity-10 rounded-lg border border-white border-opacity-30 shadow-md transition bg-primary card">
         <h1 className="text-xl">Proficient</h1>
-       <span className="flex flex-wrap space-x-2">
-         <SkillIcon icon="javascript" hovertext="JavaScript"/>
+        <span className="flex flex-wrap items-center space-x-2 space-y-2">
+        <SkillIcon icon="javascript" hovertext="JavaScript"/>
          <SkillIcon icon="typescript" hovertext="TypeScript"/>
          <SkillIcon icon="html" hovertext="HTML"/>
          <SkillIcon icon="css" hovertext="CSS"/>
@@ -55,9 +55,9 @@ export default function Skills() {
          <SkillIcon icon="arduino" hovertext="Arduino"/>
        </span>
       </div>
-      <div className="flex flex-col justify-center items-center p-4 w-full">
+      <div className="p-4 w-full max-w-md bg-opacity-10 rounded-lg border border-white border-opacity-30 shadow-md transition bg-primary card">
         <h1 className="text-xl">Competent</h1>
-       <span className="flex flex-wrap space-x-2">
+        <span className="flex flex-wrap items-center space-x-2 space-y-2">
        <SkillIcon icon="linux" hovertext="Linux SysAdmin"/>
        <SkillIcon icon="c" hovertext="C"/>
        <SkillIcon icon="sqlite" hovertext="sqlite"/>
@@ -70,9 +70,9 @@ export default function Skills() {
        <SkillIcon icon="prettier" hovertext="Prettier"/>
        </span>
       </div>
-      <div className="flex flex-col justify-center items-center p-4 w-full">
+      <div className="p-4 w-full max-w-md bg-opacity-10 rounded-lg border border-white border-opacity-30 shadow-md transition bg-primary card">
         <h1 className="text-xl">Learning</h1>
-       <span className="flex flex-wrap space-x-2">
+        <span className="flex flex-wrap items-center space-x-2 space-y-2 basis-auto">
        <SkillIcon icon="rust" hovertext="Rust"/>
        <SkillIcon icon="java" hovertext="Java"/>
        <SkillIcon icon="tauri" hovertext="Tauri"/>

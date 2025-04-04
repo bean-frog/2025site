@@ -16,7 +16,7 @@ const Worm = () => {
     smoothness: 0.5,
   })
 
-  // Track mouse position and last move time.
+  // mouse pos
   const mouseState = useRef({
     x: window.innerWidth / 2,
     y: window.innerHeight / 2,
@@ -25,7 +25,7 @@ const Worm = () => {
 
   useEffect(() => {
     const canvas = canvasRef.current
-    if (!canvas) return // Prevent null reference errors
+    if (!canvas) return // null reference errors make me die so now i make them die too
 
     const ctx = canvas.getContext('2d')
     canvas.width = window.innerWidth
@@ -51,7 +51,6 @@ const Worm = () => {
       return a + diff * t
     }
 
-    // Update the mouse state on mouse movement.
     const handleMouseMove = (e) => {
       mouseState.current.x = e.clientX
       mouseState.current.y = e.clientY
@@ -67,7 +66,6 @@ const Worm = () => {
       const mouseActive = now - mouseState.current.lastMoveTime < 200
 
       if (mouseActive) {
-        // Ensure worm goes near but not touching the mouse
         const mx = mouseState.current.x
         const my = mouseState.current.y
         const dx = worm.current.x - mx
@@ -89,7 +87,7 @@ const Worm = () => {
         worm.current.targetDirection = desiredAngle
         worm.current.noise = 0
       } else {
-        // If the mouse hasn’t moved recently, wander randomly.
+        // wander randomly if mouse hasn't moved in a while
         worm.current.targetDirection += (Math.random() * 2 - 1) * 0.05
         const dx = mouseState.current.x - worm.current.x
         const dy = mouseState.current.y - worm.current.y
@@ -111,16 +109,13 @@ const Worm = () => {
         turningRate
       )
 
-      // Compute the effective direction (with added noise).
       const effectiveDirection = worm.current.baseDirection + worm.current.noise
       const easedSpeed = baseSpeed * ease(worm.current.currentSpeed)
 
-      // Update the worm’s position.
       worm.current.x += Math.cos(effectiveDirection) * easedSpeed
       worm.current.y += Math.sin(effectiveDirection) * easedSpeed
       worm.current.sizePhase += 0.08
 
-      // Update the history
       const lastPos = worm.current.history[0]
       const distance = Math.hypot(
         worm.current.x - lastPos.x,

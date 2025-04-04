@@ -1,5 +1,4 @@
 export default function ProjectCard({ title, description, links, languages }) {
-    // Define language colors with hex codes for inline styling
     const languageColors = {
       Javascript: "#f1e05a",
       Python: "#3572A5",
@@ -16,7 +15,8 @@ export default function ProjectCard({ title, description, links, languages }) {
     
   
     return (
-      <div className="bg-opacity-10 rounded-lg border border-white border-opacity-30 bg-primary transitio card">
+      
+      <div className="bg-opacity-10 rounded-lg border border-white border-opacity-30 transition bg-primary card">
         <div className="card-body">
           <div className="flex justify-between items-center">
             <div className="flex items-center space-x-2">
